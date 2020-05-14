@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div id="todos">
+    <h1>Welcome {{name}}</h1>
+    <div class="addTodo" style="margin:auto; width:80%; text-align:center;">
+      <form action="/add" method="post">
+      <input type=text placeholder="Add To-Do" id="newTodo" name="nam">
+      <input type='submit' id="add">
+      </form>
+    </div>
+  </div>
+  <div style="position: absolute; bottom: 0; width: 100%; height: 50px;">
+        <p id="todoList"> <small>Designed by Olufisayo </small></p>
+  </div>
+{% endblock %}

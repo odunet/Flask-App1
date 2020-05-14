@@ -5,14 +5,7 @@
    <link rel='stylesheet' href='{{ url_for('static', filename='style.css') }}' />
  </head>
  <body>
-   <div id="todos">
-     <h1>To-Dos {{ hii }}</h1>
-     <ul id="todoList">
-     </ul>
-     <div class="addTodo">
-       <input type=text placeholder="Add To-Do" id="newTodo">
-       <button id="add">Add</button>
-     </div>
-   </div>
+   {% block body %}
+   {% endblock %}
  </body>
 </html>

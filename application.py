@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template,request
 
 from markupsafe import escape
 
@@ -11,17 +11,22 @@ def index(name):
 @app.route("/goodbye")
 def index(name):
     return "Bye Ayo"
-
-
-@app.route("/<name>")
-def index(name):
-    return "<h1> Hello {} </h1>".format(name)
 """
 
+@app.route("/hello")
+def hello():
+    name = request.args.get('name')
+    return render_template('todo.html', name=name)
+
+"""
 @app.route('/')
 @app.route('/<hii>')
 def hello(hii=None):
-    return render_template('index.html', hii=hii)
+"""
+
+@app.route('/')
+def index():
+    return render_template('home.html')
 """
 url_for('static', filename='style.css')
 url_for('static', filename='jscript.css')

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+   <div id="todos" style="margin:auto; width:80%; text-align:center;">
+     <h1>To-Dos for ALL</h1>
+     <p style="padding 30px">
+        Welcome to your personnal list {{ name }}
+       </p>
+       <a href="/login">Click here to add to list</a>
+     <ul id="todoList">
+       {% for user in todos %}
+         <li>{{ user }}</li>
+       {% endfor %}
+     </ul>
+   </div>
+{% endblock %}
