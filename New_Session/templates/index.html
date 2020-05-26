@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>getting the session</title>
+</head>
+<body>
+<p>The session is active</p>
+<ul id="todoList">
+  {% for row in rows %}
+    <li> {{ [row] }} </li>
+  {% endfor %}
+</ul>
+<a href="/">Click here to add to list</a>
+</body>
+</html>

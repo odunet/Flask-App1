@@ -5,7 +5,7 @@
      <p>
         Welcome to your personnal list, enter your login details below:
        </p>
-     <form action="/login" method="post" style="text-align: left;">
+     <form action="/home" method="post" style="text-align: left;">
       <label>Username: </label> <input type="text" name="username" placeholder="Username" id="tt">
       <label>Password:</label> <input type="password" name="pwd" id="pw" placeholder="Password">
       <label>Show Password </label> <input type="checkbox" id=chk>
@@ -13,9 +13,8 @@
        </form>
    </div>
         <script>
-          console.log("testing");
             document.querySelector('#tt').onkeyup = function(){
-               if (document.querySelector('#tt').value === '') {
+               if ((document.querySelector('#tt').value === '') AND (document.querySelector('#pw').value === ''))  {
                  document.querySelector('#add').disabled = true;}
                else{
                 document.querySelector('#add').disabled = false;}
@@ -30,6 +29,6 @@
             else {
              x.type = "password";}
             }
-            console.log("end");
+          //  console.log("end");
         </script>
 {% endblock %}
