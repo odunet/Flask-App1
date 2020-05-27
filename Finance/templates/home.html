@@ -1,13 +1,11 @@
 {% extends "layout.html" %}
 {% block body %}
-  <div id="todos">
-    <h1>Welcome to the To-Do App</h1>
-    <form action="/hello" class="addTodo">
-      <input type=text name="name" placeholder="Enter your name">
-      <input type=submit>
-    </form>
-  </div>
-  <div style="position: absolute; bottom: 0; width: 100%; height: 50px;">
-        <p id="todoList"> <small>Designed by Olufisayo </small></p>
-  </div>
+   <div id="todos">
+     <h1>To-Dos for User</h1>
+     <ul id="todoList">
+     </ul>
+     <div class="addTodo">
+       <a href="/redir">Click her to go to Redirect page</a>
+     </div>
+   </div>
 {% endblock %}
