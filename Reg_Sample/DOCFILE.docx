@@ -1,0 +1,12 @@
+Plan
+html
+1) Home file: This is the landing page, with navigation that is able to link to
+(a) home
+(b) login
+(c) Register
+(d)Drop down:
+  (i)check share price: Must not be logged in
+  (ii)buy shares: must be logged in
+  (iii)Transaction history
+  (iv)sell shares
+  (v)logout

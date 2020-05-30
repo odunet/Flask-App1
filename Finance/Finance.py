@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template,request,redirect, session
+from flask import Flask, url_for, render_template,request,redirect, session, flash
 
 from markupsafe import escape
 
@@ -24,6 +24,8 @@ def redir():
         print(session['user'] ,' This is the value of session in Redir')
         return redirect(url_for('catch'))
     else:
+        flash("You have redirected!", "info")
+        #warning, info, and error
         print("badder")
         return render_template('redir.html')
 

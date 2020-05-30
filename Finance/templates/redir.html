@@ -1,6 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
   <div id="todos">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for msg in messages %}
+           <p>{{msg}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
     <h1>Welcome to the To-Do App</h1>
     <form action="/redir" class="addTodo" method="post">
       <input type=text name="name" placeholder="Enter your name">
